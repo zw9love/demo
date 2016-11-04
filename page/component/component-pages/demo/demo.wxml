@@ -1,0 +1,158 @@
+<import src="../../../API/common/header.wxml" />
+<import src="../../../API/common/footer.wxml" />
+
+
+<!--<progress percent="20" show-info />
+<progress percent="40" stroke-width="12" show-info/>
+<progress percent="60" color="pink" show-info/>
+<progress percent="80" active show-info />
+
+<view class="btn-area">
+  <view class="body-view">
+    <text>{{text}}</text>
+    <button bindtap="add">add line</button>
+    <button bindtap="remove">remove line</button>
+  </view>
+</view>
+
+<view class="group">
+  <block wx:for="{{iconSize}}">
+    <icon type="success" size="{{item}}"/>
+  </block>
+</view>
+
+<view class="group">
+  <block wx:for="{{iconType}}">
+    <icon type="{{item}}" size="45"/>
+  </block>
+</view>
+
+
+<view class="group">
+  <block wx:for="{{iconColor}}">
+    <icon type="success" size="45" color="{{item}}"/>
+  </block>
+</view>
+
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" />
+    </swiper-item>
+  </block>
+</swiper>
+<button bindtap="changeIndicatorDots"> indicator-dots </button>
+<button bindtap="changeAutoplay"> autoplay </button>
+<slider bindchange="intervalChange" show-value min="500" max="2000"/> interval
+<slider bindchange="durationChange" show-value min="1000" max="10000"/> duration
+
+
+<modal title="标题" confirm-text="确定" cancel-text="取消" hidden="{{modalHidden}}" bindconfirm="modalChange" bindcancel="modalChange">
+  这是对话框的内容。
+</modal>
+
+<modal class="modal" hidden="{{modalHidden2}}" no-cancel bindconfirm="modalChange2">
+  <view> 内容可以插入节点 </view>
+</modal>
+
+<view class="btn-area">
+  <button type="default" bindtap="modalTap">点击弹出modal</button>
+  <button type="default" bindtap="modalTap2">点击弹出modal2</button>
+</view>
+
+
+<button type="default" bindtap="actionSheetTap">弹出action sheet</button>
+<action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetChange">
+  <block wx:for="{{actionSheetItems}}">
+    <action-sheet-item class="item" bindtap="bindItemTap" data-name="{{item}}">{{item}}</action-sheet-item>
+  </block>
+  <action-sheet-cancel class="cancel">取消</action-sheet-cancel>
+</action-sheet>-->
+
+<!--<map longitude="113.324520" latitude="23.099994" markers="{{markers}}" covers="{{covers}}" class="map"></map>-->
+
+<!-- canvas.wxml -->
+<!--<canvas style="width: 200px; height: 200px;margin:0 auto;display:block" canvas-id="firstCanvas"></canvas>-->
+
+<!-- 当使用绝对定位时，文档流后边的canvas的显示层级高于前边的canvas-->
+<!--<canvas style="width: 200px; height: 200px;margin:0 auto;display:block" canvas-id="secondCanvas"></canvas>-->
+<!-- 因为canvas-id与前一个canvas重复，该canvas不会显示，并会发送一个错误事件到AppService -->
+<!--<canvas style="width: 100%; height: 100%;" canvas-id="secondCanvas" binderror="canvasIdErrorCallback"></canvas>-->
+
+
+<!--<view class="page">
+  <view class="page__hd">
+    <text class="page__title">image</text>
+    <text class="page__desc">图片</text>
+  </view>
+  <view class="page__bd">
+    <view class="section section_gap" wx:for="{{array}}" wx:for-item="item">
+      <view class="section__title">{{item.text}}</view>
+      <view class="section__ctn">
+        <image class="img" style="background-color: #eeeeee;" mode="{{item.mode}}" src="{{src}}"></image>
+      </view>
+    </view>
+  </view>
+</view>-->
+
+
+
+
+<!--<view class="body-view">
+  <toast hidden="{{toast1Hidden}}" bindchange="toast1Change">
+    默认
+  </toast>
+  <button type="default" bindtap="toast1Tap">点击弹出默认toast</button>
+</view>
+<view class="body-view">
+  <toast hidden="{{toast2Hidden}}" duration="3000" bindchange="toast2Change">
+    设置duration
+  </toast>
+  <button type="default" bindtap="toast2Tap">点击弹出设置duration的toast</button>
+</view>-->
+
+
+<view class="btn-area">
+<template is="header" data="{{title: '全部接口测试啊别闹'}}"/>
+
+    <button bindtap="jump">跳转页面,在新的页面打开</button>
+    <button bindtap="jump2">跳转页面,当前页面打开</button>
+    <button bindtap="set">点击设置标题</button>
+    <button bindtap="back">返回上个页面</button>
+    <button bindtap="show">加载中</button>
+    <button bindtap="hide">消失吧</button>
+    <view class="page-body-text-network-type">{{networkType}}</view>
+    
+    <button bindtap="network">获取网络状态</button>
+
+      <view class="page-body">
+    <view class="page-body-wrapper">
+      <form bindsubmit="openLocation">
+        <view class="page-body-form">
+          <view class="page-body-form-item">
+            <text class="page-body-form-key">经度</text>
+            <input class="page-body-form-value" type="text" disabled="{{true}}"  value="113.324520" name="longitude"></input>
+          </view>
+          <view class="page-body-form-item">
+            <text class="page-body-form-key">纬度</text>
+            <input class="page-body-form-value" type="text" disabled="{{true}}"  value="23.099994" name="latitude"></input>
+          </view>
+          <view class="page-body-form-item">
+            <text class="page-body-form-key">位置名称</text>
+            <input class="page-body-form-value" type="text" disabled="{{true}}"  value="T.I.T 创意园" name="name"></input>
+          </view>
+          <view class="page-body-form-item" style="border-bottom: none;">
+            <text class="page-body-form-key">详细位置</text>
+            <input class="page-body-form-value" type="text" disabled="{{true}}"  value="广州市海珠区新港中路397号" name="address"></input>
+          </view>
+        </view>
+        <view class="page-body-buttons">
+          <button class="page-body-button" type="primary" formType="submit">查看位置</button>
+        </view>
+      </form>
+    </view>
+  </view>
+  <template is="footer" />
+</view>
+

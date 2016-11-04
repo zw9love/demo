@@ -1,0 +1,16 @@
+
+
+swiper {
+    height:375rpx;
+    position: relative
+}
+
+.slide-image{
+    width:100%;
+    height:100%;
+}
+
+swiper-dot::before{
+    width:20px;
+    height:20px;
+}
