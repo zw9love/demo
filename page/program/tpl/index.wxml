@@ -1,8 +1,9 @@
 <swiper indicator-dots="{{indicatorDots}}"
-  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" current="{{current}}"  id="test">
   <block wx:for="{{url}}">
     <swiper-item>
       <image src="{{item}}" class="slide-image" />
     </swiper-item>
   </block>
 </swiper>
+<view animation="{{animationData}}" style="background:red;height:100rpx;width:100rpx;display:inline-block;" bindtap="rotateAndScaleThenTranslate">123</view>
